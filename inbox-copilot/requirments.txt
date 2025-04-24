@@ -1,0 +1,4 @@
+langgraph
+transformers
+torch  # required by transformers
+streamlit
