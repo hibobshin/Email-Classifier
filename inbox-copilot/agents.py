@@ -5,7 +5,7 @@ classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnl
 
 def summarizer_agent(state):
     email_text = state["email"]
-    summary = summarizer(email_text, max_length=60, min_length=20, do_sample=False)[0]["summary_text"]
+    summary = summarizer(email_text, max_length=60, min_length=10, do_sample=False)[0]["summary_text"]
     return {**state, "summary": summary}
 
 def classifier_agent(state):

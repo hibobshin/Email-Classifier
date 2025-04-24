@@ -3,7 +3,7 @@ from agents import summarizer_agent, classifier_agent, action_agent
 
 # Define the state graph
 def build_graph():
-    workflow = StateGraph()
+    workflow = StateGraph(dict)
     workflow.add_node("summarizer", summarizer_agent)
     workflow.add_node("classifier", classifier_agent)
     workflow.add_node("action", action_agent)
